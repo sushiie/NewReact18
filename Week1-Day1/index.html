@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React 18</title>
+  </head>
+  <body>
+    <h1>Hello React with JUST HTML</h1>
+    <div id="container"></div>
+    <!-- will render Not Rendered if react app is not running correctly -->
+    <div id="root">Not rendered</div>   
+
+    <!-- these scripts should be loaded before using react functions , thus loaded before the script code -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+
+    <script>
+      const headerJS = document.createElement("h1");
+      headerJS.innerHTML = "Hello using javascript";
+      document.getElementById("container").appendChild(headerJS);
+
+      const root = document.getElementById("root");
+
+      const headerReact1 = React.createElement("h1", {}, "Header1 using React");
+      const headerReact2 = React.createElement("h1", {}, "Header2 using React");
+      const container = React.createElement(
+        "div",
+        { class: "new-react-container" },
+        [headerReact1, headerReact2]
+      );
+
+      const rootElementForReact = ReactDOM.createRoot(root);
+      rootElementForReact.render(container);
+    </script>
+  </body>
+</html>
