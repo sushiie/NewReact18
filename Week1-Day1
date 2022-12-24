@@ -1,0 +1,37 @@
+Day 1: 
+
+Q: What is Emmet?
+A: Emmets are code shortcuts that are used by developers to generate code in editors. These help devs by making them generate boiler plate codes.
+https://code.visualstudio.com/docs/editor/emmet
+
+Q: Difference between a Library and Framework?
+A: A library is a collection of functions, which a developer can use to solve a certain problem and the program can use the functions from the library as and when needed by the dev. Meaning the dev controls the usage of library. 
+A framework is a full fledged environment or collection of libraries that put a blue print of the application development around which a developer has to develop the application. The dev has to write code that in turn will be used in the framework when it will execute that part. Thus limiting the flexibility.
+Though frameworks limit the flexibility of a dev they give robust mechanism to develop complex app on the other hand the libraries give dev a freedom to use functions as and when needed.
+https://kruschecompany.com/framework-vs-library/#:~:text=The%20framework%20provides%20the%20flow,the%20code%20from%20the%20library.
+
+Q: What is CDN? Why do we use it?
+A: A CDN is a content delivery network which helps availability of any deployed resouces through various delivery servers spread across the globe. Through CDN a user can get the resource with less latency. Other benefits of CDN includes: 
+i) Improving website load times
+ii) Reducing bandwidth costs
+iii) Increasing content availability and redundancy 
+iv) Improving website security
+https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/
+
+Q: Why is React known as React?
+A: Because it reacts to the events on the UI layer. 
+
+Q: What is crossorigin in script tag?
+A: Corssorigin means domains other than the domain the site is hosted. By setting "corssorigin" attribute in the script tag we allow the script to be loaded from other origin from our origin. Thus enabling CORS for that resource script. This attribute is only relevant when the script is retrieved from a third party server. Do not use this attribute when these files are on your own server.
+https://dofactory.com/html/script/crossorigin#:~:text=The%20crossorigin%20attribute%20on%20a,retrieve%20files%20from%20other%20domains.
+
+Q: What is diference between React and ReactDOM.
+A: React is the actual package that holds the code for components, state, props etc for working. ReactDOM is the package that holds the functions required for interaction of react components or things with browser DOM. Thus acts as glue between React and the DOM.
+https://coursework.vschool.io/react-vs-reactdom/#:~:text=What%20is%20the%20difference%3F,your%20application%20to%20the%20index.
+
+Q: What is difference between react.development.js and react.production.js files via CDN?
+A: No difference other than production being minified. Thus making it light and fast for retrieval from CDN.
+
+Q: What is async and defer?
+A: These are mechanisms of fecthing and executing scripts from server while parsing an html page. In a normal scenario (whithout async or defer) the browser reads and renders HTML line by line and on encountering the script tags fetches the script, runs it and after completing the script execution, returns to the HTML parsing. This causes a pause in HTML rendering. However in async and defer the scripts are fetched from server in parallel to the HTML parsing. Only difference is that, in Async the scripts are executed right after it is fetched and available to run, thus holding the rendering of HTML and in Defer the scripts are executed after the HTML parsing is complete, thus not holding the HTML rendering.
+One more dirrefence is that async does not maintain the order os executing the scripts if there are more than one scripts, but in defer the order is maintained.
