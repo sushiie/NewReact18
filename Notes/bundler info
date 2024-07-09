@@ -1,0 +1,32 @@
+NPM is just package manager not "node package manager"
+package.json is a configuration for npm, it takes care of all the packages/dependencies needed for the app
+bundler will minify, clean, bundle, chunking etc basically make it production ready
+DevDep: generally required in dev phase rather than being used for app running/functioning
+
+^ => caret ~ => tild
+^ will only upgrade to minor versions (thus usually safe to use this)
+~ will upgrade to the major versions
+
+package-lock will keep track of exact version installaed, package.json may contain approximate version with ~ or ^.
+
+transitive dependencies: dependencies of dependencies needed for our app 
+
+npx means executing any package using npm
+
+Parcel:
+- Dev build
+- local server
+- HMR - Hot Module Replacement
+- File watching algorithm - written in C++
+- Caching - faster builds
+- Image Optimization
+- Minification
+- Bundling
+- Compressing files
+- Consistent Hashing
+- Code Splitting
+- Diffrential Bundling - suppot for older browsers
+- Diagnostics
+- Error Handling
+- HTTPs
+- Tree Shaking - remove unsued code
