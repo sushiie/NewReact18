@@ -1,0 +1,35 @@
+- Class based components are nothing but regular JS classes extending React.Component.
+- e.g.
+
+    class UserClass extends React.Component {}
+- like a regular class it has a constructor where we need to get the props using
+    super(props)
+- state variables are also defined in the constructor using reserved "state" keyword
+    this.state = {count: 0}
+- to change the state variable we use a function is given by react:
+    this.setState({count: count+1})
+  here when we update the state, the state variables that are passed will only be changed and the others will be kept as is.
+
+- Lifecycle of React Component:
+    => Render Phase
+        - constructor
+        - render()
+            - child rendering
+            - child constructor
+            - render
+            - child lifecycle methods
+        - componentDidMount  
+    => Updating Phase
+        - if any setState() is called render will be called
+        - componentDidUpdate
+    => Unmount Phase
+        - when the component is removed from UI componentWillUnmount will be called
+
+- For child components, 
+    > rendering of Parent Component is done first,
+    > then rendering of all the components is done first in batch one by one
+    > then componentDidMount is run for each one by one
+    > lastly componentDidMount of the parent will run
+
+- super(props) is needed to pass props to parent constructor and running the parent constructor for better binding of react code
+- async callbacks are not allowed in useEffect hook as it will be against the expectation from react of either return nothing or return a clean up function. secondly this will make inconsistency and confusion in react as to when to perfom the clean up.

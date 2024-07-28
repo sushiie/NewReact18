@@ -1,0 +1,11 @@
+- .js vs .jsx
+- whenever a state variable changes react re-renders the component
+- VDOM: JS representation of actual DOM
+- React Fiber
+- Reconciliation in React:
+compares old and new VDOMs and then repaints the new view (renders)
+
+- Hooks and forms resources
+ - Formik
+ - react hook forms
+ - useHooks

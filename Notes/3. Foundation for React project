@@ -1,0 +1,20 @@
+- JSX
+JSX is not HTML in Javascript. It is HTML/XML like syntax.
+
+- Babel transpiles JSX into browser understandable code
+Babel --> transpilation --> React.createElement --> ReactElement (Object) --> HTMLElement (render)
+
+- Extensions
+1. Prettier
+2. Bracket Pair Colorizer
+3. ES lint
+4. Better Comments
+
+- React Component
+- Class based components - OLD way - uses JS classes to write components
+- Functional Components - NEW - uses JS functions to write components
+- Functional components are JS functions that return a JSX Element.
+
+- Component Composition: component present inside a component 
+- JSX also sanitizes the code before rendering
+- any JS can be written in {} in JSX

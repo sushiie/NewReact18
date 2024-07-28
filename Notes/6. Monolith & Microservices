@@ -1,0 +1,18 @@
+
+
+- Monolith Architecture: 
+all the modules built into a single codebase and each time one has to build the while code for deployment etc.
+
+- Microservices: 
+different modules or services are created and maintained for different purposes so that we achieve "Separation of concerns"/"Single Responsibility Principal". This way we only build the code that is needed and not all the code.
+this way diff servervices can maintain their own code and can follow their own CI-CD differently.
+
+- different services are deployed on different ports and from there they can interact with each other by calling different that port/url
+
+e.g.:
+
+UI =>  :/1234 => something.com/
+BE =>  :/1000 => something.com/api
+SMS => :/2000 => something.com/sms
+
+- useEffect: will be called first after the first render of the component is done 
